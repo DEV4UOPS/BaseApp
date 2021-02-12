@@ -1,7 +1,15 @@
 <?php
-$servername = "localhost:3306";
-$username = "bm";
-$password = "Bbb&123456";
+
+//Réception des données de la page
+
+$ipaddr = $_POST['ipaddr'];
+$portaddr = $_POST['portaddr'];
+$user = $_POST['user'];
+$password = $_POST['password'];
+
+$servername = $ipaddr.':'.$portaddr;
+$username = $user;
+$password = $password;
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
